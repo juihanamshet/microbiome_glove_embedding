@@ -18,7 +18,7 @@ f = open(os.path.join(data_dir, "y_sample_ibd.obj"), "rb")
 y = pickle.load(f)
 f.close()
 
-tsne = TSNE(n_components=2, verbose=1, perplexity=40, n_iter=300)
+tsne = TSNE(n_components=3, verbose=1, perplexity=40, n_iter=300)
 tsne_results = tsne.fit_transform(X)
 
 X['dim1'] = tsne_results[:,0]
